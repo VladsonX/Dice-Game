@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <main>
+      <section id="menu" class="menu">
+        <form
+          id="logIn"
+          class="menu__logIn"
+        >
+          <div class="menu__player-wrapper">
+            <label class="menu__label" for="player1Name"
+              >Please enter the name of player 1: <span id="player1DynamicName"></span></label
+            >
+            <input
+              maxlength="16"
+              required
+              class="menu__input"
+              id="player1Name"
+              type="text"
+            />
+          </div>
+          <div class="menu__player-wrapper">
+            <label class="menu__label" for="player2Name"
+              >Please enter the name of player 2: <span id="player2DynamicName"></span></label
+            >
+            <input
+              maxlength="16"
+              required
+              class="menu__input"
+              id="player2Name"
+              type="text"
+            />
+          </div>
+          <button form="logIn" type="submit" class="button button_play">
+            Start game
+          </button>
+        </form>
+      </section>
+      <section id="playground" class="playground">
+        <div class="nicknames-container">
+          <div id="player1Label" class="nickname"></div>
+          <div id="player2Label" class="nickname"></div>
+        </div>
+        <div class="dice-wrapper">
+          <div id="dice1" class="dice dice_1">
+            <div class="dice__row dice__row_1">
+              <div class="dice__dot dice__dot_1"></div>
+              <div class="dice__dot dice__dot_2"></div>
+            </div>
+            <div class="dice__row dice__row_2 center">
+              <div class="dice__dot dice__dot_3 display"></div>
+              <div class="dice__dot dice__dot_4"></div>
+            </div>
+            <div class="dice__row dice__row_3">
+              <div class="dice__dot dice__dot_5"></div>
+              <div class="dice__dot dice__dot_6"></div>
+            </div>
+          </div>
+          <div id="dice2" class="dice dice_2">
+            <div class="dice__row dice__row_1">
+              <div class="dice__dot dice__dot_1"></div>
+              <div class="dice__dot dice__dot_2"></div>
+            </div>
+            <div class="dice__row dice__row_2 center">
+              <div class="dice__dot dice__dot_3 display"></div>
+              <div class="dice__dot dice__dot_4"></div>
+            </div>
+            <div class="dice__row dice__row_3">
+              <div class="dice__dot dice__dot_5"></div>
+              <div class="dice__dot dice__dot_6"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <aside id="scoreboard" class="scoreboard">
+        <button id="play" class="button button_play">Play</button>
+        <button id="stop" class="button button_stop">Finish</button>
+      </aside>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
