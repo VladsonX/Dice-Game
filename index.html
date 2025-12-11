@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Dice Game</title>
   </head>
   <body>
     <main>
       <section id="menu" class="menu">
-        <form
-          id="logIn"
-          class="menu__logIn"
-        >
+        <h1 class="menu__title">Dice Game</h1>
+        <form id="logIn" class="menu__logIn">
           <div class="menu__player-wrapper">
             <label class="menu__label" for="player1Name"
-              >Please enter the name of player 1: <span id="player1DynamicName"></span></label
-            >
+              >Please enter the name of player 1:
+              <span id="player1DynamicName"></span
+            ></label>
             <input
               maxlength="16"
               required
@@ -27,8 +32,9 @@
           </div>
           <div class="menu__player-wrapper">
             <label class="menu__label" for="player2Name"
-              >Please enter the name of player 2: <span id="player2DynamicName"></span></label
-            >
+              >Please enter the name of player 2:
+              <span id="player2DynamicName"></span
+            ></label>
             <input
               maxlength="16"
               required
@@ -80,6 +86,16 @@
       </section>
       <aside id="scoreboard" class="scoreboard">
         <button id="play" class="button button_play">Play</button>
+        <table class="scoreboard__table">
+          <tr class="scoreboard__row">
+            <th id="scoreboardPlayer1" class="scoreboard__nickname"></th>
+            <th id="scoreboardPlayer2" class="scoreboard__nickname"></th>
+          </tr>
+          <tr class="scoreboard__row">
+            <td id="scorePlayer1" class="scoreboard__cell">0</td>
+            <td id="scorePlayer2" class="scoreboard__cell">0</td>
+          </tr>
+        </table>
         <button id="stop" class="button button_stop">Finish</button>
       </aside>
     </main>
