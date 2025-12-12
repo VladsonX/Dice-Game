@@ -27,8 +27,6 @@ function startGame(event) {
   scoreboard.classList.remove("dnone");
   playground.classList.add("dflex");
   scoreboard.classList.add("dflex");
-  console.log("Menu closed");
-  console.log("Game started");
   player1Label.textContent = player1Name;
   player2Label.textContent = player2Name;
   document.querySelector("#scoreboardPlayer1").textContent = player1Name;
@@ -42,6 +40,18 @@ function finishGame() {
   menu.classList.add("dflex");
   playground.classList.add("dnone");
   scoreboard.classList.add("dnone");
+  const scorePlayer1 = document.querySelector("#scorePlayer1");
+  const scorePlayer2 = document.querySelector("#scorePlayer2");
+  scorePlayer1.textContent = 0;
+  scorePlayer2.textContent = 0;
+  console.log(scorePlayer1);
+  console.log(scorePlayer2);
+  const dice1 = document.querySelector("#dice1");
+  const dice2 = document.querySelector("#dice2");
+  dice1.classList.remove("dice_winner");
+  dice2.classList.remove("dice_winner");
+  nickNames[0].classList.remove("player_winner");
+  nickNames[1].classList.remove("player_winner");
 }
 
 function playGame() {

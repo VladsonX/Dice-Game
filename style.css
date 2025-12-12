@@ -167,12 +167,11 @@ main {
 }
 
 .rotate {
-  /* transition: .5s all ease-in-out; */
-  transform: rotate(360deg);
+  transform: rotate(1080deg);
 }
 
 .dice_winner {
-  transition: 0.3s all ease-in-out;
+  transition: 0.5s all ease-in-out;
   transform: rotate(720deg) translateY(-50px);
 }
 
@@ -182,13 +181,13 @@ main {
 }
 
 .scoreboard__table {
-  border: 3px solid black;
+  border: 2px solid black;
   border-collapse: collapse;
 }
 
 .scoreboard__row {
   position: relative;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 .scoreboard__nickname {
