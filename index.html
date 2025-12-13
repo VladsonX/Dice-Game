@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="media.css" />
     <title>Dice Game</title>
   </head>
   <body>
@@ -21,77 +21,77 @@
             <div class="menu__text-wrapper">
               <h1 class="menu__title">Dice Game</h1>
               <p class="menu__descr">
-                This is a classic 2-player Dice Game. Enter your nicknames and
-                find out who's a winner!
+                Welcome to the classic 2-player Dice Duel. Enter your nicknames
+                below and let the dice decide the winner!
               </p>
             </div>
             <div class="menu__login-wrapper">
-                <form id="logIn" class="menu__logIn">
-                  <div class="menu__player-wrapper">
-                    <label class="menu__label" for="player1Name"
-                      >Player 1:
-                      <span
-                        class="menu__entered-name"
-                        id="player1DynamicName"
-                      ></span
-                    ></label>
-                    <input
-                      placeholder="Player 1"
-                      maxlength="16"
-                      required
-                      class="menu__input"
-                      id="player1Name"
-                      type="text"
-                    />
+              <form id="logIn" class="menu__logIn">
+                <div class="menu__player-wrapper">
+                  <label class="menu__label" for="player1Name"
+                    >Player 1:
+                    <span
+                      class="menu__entered-name"
+                      id="player1DynamicName"
+                    ></span
+                  ></label>
+                  <input
+                    placeholder="Player 1"
+                    maxlength="16"
+                    required
+                    class="menu__input"
+                    id="player1Name"
+                    type="text"
+                  />
+                </div>
+                <div class="menu__player-wrapper">
+                  <label class="menu__label" for="player2Name"
+                    >Player 2:
+                    <span
+                      class="menu__entered-name"
+                      id="player2DynamicName"
+                    ></span
+                  ></label>
+                  <input
+                    placeholder="Player 2"
+                    maxlength="16"
+                    required
+                    class="menu__input"
+                    id="player2Name"
+                    type="text"
+                  />
+                </div>
+              </form>
+              <div class="dice-wrapper dice-wrapper_menu">
+                <div class="dice dice_1">
+                  <div class="dice__row dice__row_1">
+                    <div class="dice__dot dice__dot_1"></div>
+                    <div class="dice__dot dice__dot_2"></div>
                   </div>
-                  <div class="menu__player-wrapper">
-                    <label class="menu__label" for="player2Name"
-                      >Player 2:
-                      <span
-                        class="menu__entered-name"
-                        id="player2DynamicName"
-                      ></span
-                    ></label>
-                    <input
-                      placeholder="Player 2"
-                      maxlength="16"
-                      required
-                      class="menu__input"
-                      id="player2Name"
-                      type="text"
-                    />
+                  <div class="dice__row dice__row_2 center">
+                    <div class="dice__dot dice__dot_3 display"></div>
+                    <div class="dice__dot dice__dot_4"></div>
                   </div>
-                </form>
-                <div class="dice-wrapper dice-wrapper_menu">
-                  <div class="dice dice_1">
-                    <div class="dice__row dice__row_1">
-                      <div class="dice__dot dice__dot_1"></div>
-                      <div class="dice__dot dice__dot_2"></div>
-                    </div>
-                    <div class="dice__row dice__row_2 center">
-                      <div class="dice__dot dice__dot_3 display"></div>
-                      <div class="dice__dot dice__dot_4"></div>
-                    </div>
-                    <div class="dice__row dice__row_3">
-                      <div class="dice__dot dice__dot_5"></div>
-                      <div class="dice__dot dice__dot_6"></div>
-                    </div>
-                  </div>
-                  <div class="dice dice_2">
-                    <div class="dice__row dice__row_1">
-                      <div class="dice__dot dice__dot_1"></div>
-                      <div class="dice__dot dice__dot_2"></div>
-                    </div>
-                    <div class="dice__row dice__row_2 center">
-                      <div class="dice__dot dice__dot_3 display"></div>
-                      <div class="dice__dot dice__dot_4"></div>
-                    </div>
-                    <div class="dice__row dice__row_3">
-                      <div class="dice__dot dice__dot_5"></div>
-                      <div class="dice__dot dice__dot_6"></div>
-                    </div>
+                  <div class="dice__row dice__row_3">
+                    <div class="dice__dot dice__dot_5"></div>
+                    <div class="dice__dot dice__dot_6"></div>
                   </div>
                 </div>
+                <div class="dice dice_2">
+                  <div class="dice__row dice__row_1">
+                    <div class="dice__dot dice__dot_1"></div>
+                    <div class="dice__dot dice__dot_2"></div>
+                  </div>
+                  <div class="dice__row dice__row_2 center">
+                    <div class="dice__dot dice__dot_3 display"></div>
+                    <div class="dice__dot dice__dot_4"></div>
+                  </div>
+                  <div class="dice__row dice__row_3">
+                    <div class="dice__dot dice__dot_5"></div>
+                    <div class="dice__dot dice__dot_6"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <button form="logIn" type="submit" class="button button_play">
               Start game
