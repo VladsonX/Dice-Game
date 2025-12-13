@@ -12,20 +12,23 @@
 }
 body {
   font-family: "Press Start 2P", system-ui;
+  background-color: var(--blue);
+
 }
 main {
   display: flex;
+  min-height: 100vh;
 }
 
 .container {
-  width: 90%;
+  width: 1320px;
   margin: 0 auto;
   height: 100%;
+  padding: 0 1rem;
 }
 .menu {
-  background-color: var(--blue);
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .menu__entered-name {
@@ -161,7 +164,6 @@ main {
   background-color: var(--white);
   border-radius: 15%;
   padding: 1rem;
-  border: 2px solid black;
   transition: 0.5s all ease-in-out;
   transform: rotate(-720deg);
 }
@@ -229,18 +231,27 @@ main {
 @keyframes jump {
   0% {
     transform: translateY(0);
+    opacity: 1;
   }
   25% {
-    transform: translateY(-25px);
+    transform: translateY(-15px);
+    opacity: .75;
+
   }
   50% {
     transform: translateY(-30px);
+    opacity: .5;
+
   }
   75% {
-    transform: translateY(-25px);
+    transform: translateY(-35px);
+    opacity: .25;
+
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(-40px);
+    opacity: 0;
+
   }
 }
 .nicknames-container {
@@ -272,6 +283,7 @@ main {
 .dice_winner {
   transition: 0.5s all ease-in-out;
   transform: rotate(720deg) translateY(-50px);
+  box-shadow: 0px 0px 27px 10px gold;
 }
 
 .player_winner {
@@ -280,8 +292,7 @@ main {
   position: relative;
 }
 .player_winner::before {
-  animation: infinite jump 1s ease-in-out;
-  opacity: 1;
+  animation: jump 1s ease-in-out;
   /* transform: translateY(-30px); */
 }
 .scoreboard__table {
