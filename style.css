@@ -2,43 +2,75 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comfortaa", sans-serif;
 }
 
 :root {
-  --white: #efece3;
-  --lightBlue: #8fabd4;
-  --blue: #4a70a9;
+  --black: #0c0950;
+  --white: #fbe4d6;
+  --lightBlue: #261fb3;
+  --blue: #161179;
+}
+body {
+  font-family: "Press Start 2P", system-ui;
 }
 main {
   display: flex;
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+}
 .menu {
-  display: flex;
-  background-color: var(--white);
+  background-color: var(--blue);
   width: 100vw;
   height: 100vh;
+}
+
+.menu__entered-name {
+  color: gold;
+}
+
+.menu__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 4rem;
 }
 
+.menu__login-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu__descr {
+  color: var(--white);
+}
 .menu__title {
   font-size: 5rem;
   font-weight: 900;
   font-family: "Bungee Shade", sans-serif;
+  color: gold;
 }
 
 .menu__logIn {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 50%;
-  height: 50%;
-  background-color: var(--lightBlue);
-  border-radius: 40px;
+  width: 45%;
+  gap: 2rem;
+  color: var(--white);
 }
 
 .menu__player-wrapper {
@@ -53,15 +85,23 @@ main {
 }
 
 .menu__input {
+  transition: 0.3s all ease-in-out;
+  background-color: var(--white);
   border-radius: 10px;
   border: 1px solid;
   font-size: 1.25rem;
   padding: 0.5rem 1rem;
+  font-family: "Comfortaa", system-ui;
+  font-weight: 700;
+}
+
+.menu__input:focus {
+  outline: 2px solid gold;
 }
 
 .playground {
   display: none;
-  background-color: var(--lightBlue);
+  background-color: var(--blue);
   flex-direction: column;
   flex: 10;
   height: 100vh;
@@ -75,7 +115,7 @@ main {
   gap: 4rem;
   /* justify-content: space-between; */
   flex: 2;
-  background-color: var(--white);
+  background-color: var(--black);
   border-left: 2px solid black;
   height: 100vh;
   padding: 1rem;
@@ -90,18 +130,44 @@ main {
   gap: 3rem;
 }
 
+.dice-wrapper_menu {
+  width: 45%;
+  height: 100%;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
 .dice {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 8rem;
   height: 8rem;
-  background-color: white;
+  background-color: var(--white);
   border-radius: 15%;
   padding: 1rem;
   border: 2px solid black;
   transition: 0.5s all ease-in-out;
   transform: rotate(-720deg);
+}
+
+.dice-wrapper_menu .dice {
+  animation: infinite rotate 1s ease-in-out;
 }
 
 .dice__row {
@@ -120,29 +186,62 @@ main {
 }
 
 .button {
+  transition: 0.3s all ease-in-out;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  font-family: "Press Start 2P", system-ui;
+  font-size: 1rem;
   transition: 0.2s all ease;
   margin: 0 auto;
-  width: 10rem;
-  height: 3rem;
-  color: white;
-  border: 0px;
-  border-radius: 15px;
+  width: 15rem;
+  height: 4rem;
+  color: black;
+  border-radius: 10px;
 }
 .button_play {
-  background-color: var(--blue);
+  background-color: gold;
 }
 .button:hover {
   background-color: black;
-  color: var(--white);
+  color: gold;
+  border: 2px solid gold;
 }
 .button_stop {
   background-color: red;
   margin-top: auto;
 }
 .nickname {
-  color: black;
+  color: var(--white);
   font-weight: 900;
   font-size: 2.5rem;
+  position: relative;
+}
+
+.nickname::before {
+  transition: 0.5s all ease;
+  font-size: 1.5rem;
+  content: "+1";
+  opacity: 0;
+  position: absolute;
+  top: -100%;
+  left: 0;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 .nicknames-container {
   width: 100%;
@@ -178,29 +277,35 @@ main {
 .player_winner {
   transition: 0.3s all ease-in-out;
   color: gold;
+  position: relative;
 }
-
+.player_winner::before {
+  animation: infinite jump 1s ease-in-out;
+  opacity: 1;
+  /* transform: translateY(-30px); */
+}
 .scoreboard__table {
-  border: 2px solid black;
+  border: 2px solid var(--white);
   border-collapse: collapse;
+  color: var(--white);
 }
 
 .scoreboard__row {
   position: relative;
-  border: 2px solid black;
+  border: 2px solid var(--white);
 }
 
 .scoreboard__nickname {
   font-weight: 700;
   padding: 0.5rem;
   text-align: center;
-  border: 3px solid black;
+  border: 3px solid var(--white);
   width: 50%;
 }
 
 .scoreboard__cell {
   padding: 0.5rem;
   text-align: center;
-  border: 3px solid black;
+  border: 3px solid var(--white);
   width: 50%;
 }

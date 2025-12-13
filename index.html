@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Comfortaa:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Comfortaa:wght@300..700&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -15,38 +15,88 @@
   <body>
     <main>
       <section id="menu" class="menu">
-        <h1 class="menu__title">Dice Game</h1>
-        <form id="logIn" class="menu__logIn">
-          <div class="menu__player-wrapper">
-            <label class="menu__label" for="player1Name"
-              >Please enter the name of player 1:
-              <span id="player1DynamicName"></span
-            ></label>
-            <input
-              maxlength="16"
-              required
-              class="menu__input"
-              id="player1Name"
-              type="text"
-            />
+        <div class="container">
+          <div class="menu__wrapper">
+            <div class="menu__text-wrapper">
+              <h1 class="menu__title">Dice Game</h1>
+              <p class="menu__descr">
+                This is a classic 2-player Dice Game. Enter your nicknames and
+                find out who's a winner!
+              </p>
+            </div>
+            <div class="menu__login-wrapper">
+                <form id="logIn" class="menu__logIn">
+                  <div class="menu__player-wrapper">
+                    <label class="menu__label" for="player1Name"
+                      >Player 1:
+                      <span
+                        class="menu__entered-name"
+                        id="player1DynamicName"
+                      ></span
+                    ></label>
+                    <input
+                      placeholder="Player 1"
+                      maxlength="16"
+                      required
+                      class="menu__input"
+                      id="player1Name"
+                      type="text"
+                    />
+                  </div>
+                  <div class="menu__player-wrapper">
+                    <label class="menu__label" for="player2Name"
+                      >Player 2:
+                      <span
+                        class="menu__entered-name"
+                        id="player2DynamicName"
+                      ></span
+                    ></label>
+                    <input
+                      placeholder="Player 2"
+                      maxlength="16"
+                      required
+                      class="menu__input"
+                      id="player2Name"
+                      type="text"
+                    />
+                  </div>
+                </form>
+                <div class="dice-wrapper dice-wrapper_menu">
+                  <div class="dice dice_1">
+                    <div class="dice__row dice__row_1">
+                      <div class="dice__dot dice__dot_1"></div>
+                      <div class="dice__dot dice__dot_2"></div>
+                    </div>
+                    <div class="dice__row dice__row_2 center">
+                      <div class="dice__dot dice__dot_3 display"></div>
+                      <div class="dice__dot dice__dot_4"></div>
+                    </div>
+                    <div class="dice__row dice__row_3">
+                      <div class="dice__dot dice__dot_5"></div>
+                      <div class="dice__dot dice__dot_6"></div>
+                    </div>
+                  </div>
+                  <div class="dice dice_2">
+                    <div class="dice__row dice__row_1">
+                      <div class="dice__dot dice__dot_1"></div>
+                      <div class="dice__dot dice__dot_2"></div>
+                    </div>
+                    <div class="dice__row dice__row_2 center">
+                      <div class="dice__dot dice__dot_3 display"></div>
+                      <div class="dice__dot dice__dot_4"></div>
+                    </div>
+                    <div class="dice__row dice__row_3">
+                      <div class="dice__dot dice__dot_5"></div>
+                      <div class="dice__dot dice__dot_6"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <button form="logIn" type="submit" class="button button_play">
+              Start game
+            </button>
           </div>
-          <div class="menu__player-wrapper">
-            <label class="menu__label" for="player2Name"
-              >Please enter the name of player 2:
-              <span id="player2DynamicName"></span
-            ></label>
-            <input
-              maxlength="16"
-              required
-              class="menu__input"
-              id="player2Name"
-              type="text"
-            />
-          </div>
-          <button form="logIn" type="submit" class="button button_play">
-            Start game
-          </button>
-        </form>
+        </div>
       </section>
       <section id="playground" class="playground">
         <div class="nicknames-container">
@@ -85,7 +135,7 @@
         </div>
       </section>
       <aside id="scoreboard" class="scoreboard">
-        <button id="play" class="button button_play">Play</button>
+        <button id="play" class="button button_play">Roll</button>
         <table class="scoreboard__table">
           <tr class="scoreboard__row">
             <th id="scoreboardPlayer1" class="scoreboard__nickname"></th>
@@ -96,7 +146,7 @@
             <td id="scorePlayer2" class="scoreboard__cell">0</td>
           </tr>
         </table>
-        <button id="stop" class="button button_stop">Finish</button>
+        <button id="stop" class="button button_stop">Exit</button>
       </aside>
     </main>
     <script src="script.js"></script>
