@@ -1,6 +1,10 @@
 # Dice Game
 This is a classic 2-player Dice Game created to practice DOM manipulation and JavaScript logic. The players can enter their names, roll the dice, and the game renders the results dynamically without reloading the page.
 
+## Preview
+![Main menu](./screenshots/Dice%20Game%20Menu.png)
+![Match](./screenshots/Dice%20Game%20Match.png)
+
 ## Features
 * **Dynamic Rendering:** The dice faces are drawn using CSS and controlled by JS classes (no images used).
 * **Real-time Input:** Player names are updated instantly as you type (using `input` event).
@@ -8,7 +12,7 @@ This is a classic 2-player Dice Game created to practice DOM manipulation and Ja
 * **Game Logic:** Random number generation and conditional rendering using `switch` statements.
 
 ## Live Demo
-[Roll the dice!](https://vladsonx.github.io/Dice-Game/)
+*to be updated*
 
 ## Built With
 * **Semantic and accessible HTML5** - *to be added*
