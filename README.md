@@ -8,7 +8,7 @@ This is a classic 2-player Dice Game created to practice DOM manipulation and Ja
 * **Game Logic:** Random number generation and conditional rendering using `switch` statements.
 
 ## Live Demo
-*to be updated*
+[Roll the dice!](https://vladsonx.github.io/Dice-Game/)
 
 ## Built With
 * **Semantic and accessible HTML5** - *to be added*
