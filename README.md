@@ -3,7 +3,6 @@ This is a classic 2-player Dice Game created to practice DOM manipulation and Ja
 
 ## Preview
 ![Main menu](./screenshots/Dice%20Game%20Menu.png)
-![Match](./screenshots/Dice%20Game%20Match.png)
 
 ## Features
 * **Dynamic Rendering:** The dice faces are drawn using CSS and controlled by JS classes (no images used).
@@ -12,7 +11,7 @@ This is a classic 2-player Dice Game created to practice DOM manipulation and Ja
 * **Game Logic:** Random number generation and conditional rendering using `switch` statements.
 
 ## Live Demo
-*to be updated*
+[Roll the dice!](https://vladsonx.github.io/Dice-Game/)
 
 ## Built With
 * **Semantic and accessible HTML5** - *to be added*
